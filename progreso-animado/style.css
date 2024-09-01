@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: blueviolet;
+}
+.progresbar-container {
+    width: 20px;
+    height: 00px;
+    margin: 100px auto;
+}
+.progresbar-container .outer-box {
+    border-radius: 50%;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progresbar-container .outer-box .inner-box {
+    /* background-color: red; */
+    font-size: 24px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progresbar-container svg {
+    position: absolute;
+}
+.progresbar-container circle {
+    fill: none;
+    stroke: url(#gradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 550;
+    stroke-dashoffset: 550;
+
+    animation: loading 3s linear forwards;
+}
+@keyframes loading {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
